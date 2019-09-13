@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--my styles-->
+    <link rel="stylesheet" href="css/phones-styles.css" @media="(min-width: 320px) and (max-width: 767px)"/>
+    <link rel="stylesheet" href="css/tablets-styles.css" @media="(min-width: 768px) and (max-width: 1199px)"/>
+    <link rel="stylesheet" href="css/desctop-styles.css" @media="(min-width: 1200px)"/>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&display=swap" rel="stylesheet"/>
+    <title>Почта Банк</title>
+</head>
+<body>
+    <header class="full-container main-header">
+        <article class="header-profile container">
+            <section class="header-profile_logo">
+                <img src="img/header/logo.png" alt="Почта Банк">
+                <h1>Система<br>«Наставничество»</h1>
+            </section>
+            <section class="header-profile_main">
+                <p class="header-profile_main_notifications"><span>99</span>Новых уведомлений</p>
+                <div class="header-profile_main_information">
+                    <div class="name">
+                        <p>Александров Александр Александрович</p>
+                        <p>Президент-Председатель правления</p>
+                        <p>Наставник</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="img/header/avatar.jpg" alt="face">
+                        <p>Наставник</p>
+                    </div>
+                    <div class="header-profile_mobile-img__wrapper"><span>99</span><img src="img/header/messages.png" alt="message" class="header-profile_mobile-img"></div>
+                </div>
+            </section>
+        </article>
+        <article class="mobile-menu">
+            <img src="img/header/logo.png" alt="Почта Банк">
+            <div class="mobile-menu_btn"><span></span></div>
+            <ul class="mobile-menu_main"><div class="mobile-menu_main__close"><span></span></div> 
+                <li class="mobile-menu_main_item"><a href="#">О системе «Наставничество»</a></li>
+                <li class="mobile-menu_main_item"><a href="#">Обучающие материалы</a></li>
+                <li class="mobile-menu_main_item"><a href="#">Мои стажеры</a></li>
+                <li class="mobile-menu_main_item"><a href="#">Выбор стажера</a></li>
+            </ul>
+        </article>
+        <ul class="header-tabs">
+            <li class="header-tabs_item"><a href="#" onclick="ShowContHeader('mentorsSystem', event);">О системе «Наставничество»</a></li>
+            <li class="header-tabs_item"><a href="#" onclick="ShowContHeader('learning', event);">Обучающие материалы</a></li>
+            <li class="header-tabs_item"><a href="#" onclick="ShowContHeader('myExperience', event);">Мои стажеры</a></li>
+            <li class="header-tabs_item"><a href="#" onclick="ShowContHeader('chooseExperience', event);">Выбор стажера</a></li>
+        </ul>
+    </header>
+<!--main table page-->
+    <main class="full-container page-main">
+        <section id="myExperience" class="myExperience_wrapper">
+            <header class="myExperience-header container">
+                <h1>Мои стажеры</h1>
+                <select name="" id="myExperienceHeaderSelect">
+                    <option>Новые сотрудники</option>
+                    <option>Старые сотрудники</option>
+                </select>
+            </header>
+            <article class="myExperience-choose">
+                <ul class="myExperience-choose_tabs container">
+                    <li class="myExperience-choose_tabs_item myExperience-choose_tabs_item__active " onclick="ShowContMain('id', event)"><img src="img/main/active.png" alt=""><a href="#" >Активные</a></li>
+                    <li class="myExperience-choose_tabs_item" onclick="ShowContMain('id', event)"><img src="img/main/ended.png" alt=""><a href="#">Завершенные</a></li>
+                </ul>
+            </article>
+            <main class="myExperience-table container">
+                <section class="myExperience-table_inputs">
+                    <div class="myExperience-input_wrapper"><input type="text" placeholder="Введите ваш запрос" id="myExperienceInput"></div>
+                    <div class="myExperience-dropdownmenu" id="MakroRegion">
+                        <button class="dropdown-btn" onclick="dropDownMenu('MakroRegion', event)">Не выбрано</button>
+                        <ul class="dropdown-menu-content dropdownmenu-hide">
+                            <li class="dropdown-menu-content_item"><a>Москва</a></li>
+                            <li class="dropdown-menu-content_item"><a>Север</a></li>
+                            <li class="dropdown-menu-content_item"><a>Урал</a></li>
+                            <li class="dropdown-menu-content_item"><a>Москва</a></li>
+                            <li class="dropdown-menu-content_item"><a>Север</a></li>
+                            <li class="dropdown-menu-content_item"><a>Урал</a></li>
+                            <li class="dropdown-menu-content_item"><a>Москва</a></li>
+                            <li class="dropdown-menu-content_item"><a>Север</a></li>
+                            <li class="dropdown-menu-content_item"><a>Урал</a></li>
+                        </ul>
+                    </div>
+                    <div class="myExperience-dropdownmenu" id="Podrazdelenie">
+                        <button class="dropdown-btn" onclick="dropDownMenu('Podrazdelenie', event)">Не выбрано</button>
+                        <ul class="dropdown-menu-content dropdownmenu-hide">
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                            <li class="dropdown-menu-content_item"><a>Клиентский центр №197375</a></li>
+                        </ul>
+                    </div>
+                    <div class="myExperience-dropdownmenu" id="Dolzhnoct">
+                        <button class="dropdown-btn" onclick="dropDownMenu('Dolzhnoct', event)">Не выбрано</button>
+                        <ul class="dropdown-menu-content dropdownmenu-hide">
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                            <li class="dropdown-menu-content_item"><a>САП</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="mainTable_wrapper">
+                    <table id="mainTable">
+                        <tr class="mainTable-top">
+                            <td class="mainTable-name">ФИО</td>
+                            <td>Табельный номер</td>
+                            <td>Должность</td>
+                            <td class="mainTable-unit">Подразделение</td>
+                            <td>Дата приема</td>
+                            <td>Ступень</td>
+                            <td>Статус сотрудника</td>
+                        </tr>
+                        <tr>
+                            <td>Александрова Александра Александровна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>Необходимо
+                                создать
+                                график</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Александрова Александра Александровна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td> 
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                        <tr>
+                            <td>Иванова Анна Сергеевна</td>
+                            <td>123456</td>
+                            <td>САП</td>
+                            <td class="mainTable-number"><a>Клиентский центр №197375</a></td>
+                            <td>14.11.2017</td>
+                            <td>2</td>
+                            <td>активен</td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+        </section>
+    </main>
+    <footer class="full-container">
+        <ul class="footer-content container">
+            <li class="footer-content_item"><a href="#">Корпоративный портал</a></li>
+            <li class="footer-content_item"><a href="#">База знаний</a></li>
+            <li class="footer-content_item"><a href="#">Сайт Банка</a></li>
+        </ul>
+    </footer>
+<!--Jquery-->
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!--my js-->
+<script src="js/main.js"></script>
+</body>
+</html>
